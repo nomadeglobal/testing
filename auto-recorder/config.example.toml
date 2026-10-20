@@ -1,0 +1,27 @@
+# Copier ce fichier en config.toml puis l'adapter.
+
+[obs]
+host = "localhost"
+port = 4455                 # OBS > Outils > Paramètres du serveur WebSocket
+password = "CHANGER_MOI"
+scene = "Webinaire"         # scène à activer avant l'enregistrement
+audio_source = "Audio navigateur"   # nom EXACT de la source audio à surveiller
+
+[health]
+check_every_s = 10
+silence_alert_s = 60        # alerte si aucun son pendant cette durée
+silence_floor_db = -55.0    # en dessous de ce niveau = silence
+stop_after_silence_min = 15 # arrêt auto si silence prolongé (0 = jamais) après avoir entendu du son
+file_stall_s = 45           # alerte si le fichier ne grossit plus
+net_host = "1.1.1.1"
+net_port = 443
+net_max_latency_ms = 400
+
+[alerts]
+# Notification téléphone via https://ntfy.sh (installer l'app, s'abonner au sujet).
+# Le sujet fait office de mot de passe : utiliser une chaîne longue et aléatoire.
+ntfy_topic = ""
+
+[join]
+participant_name = "Olivier"        # nom affiché si la plateforme le demande
+profile_dir = "browser-profile"     # profil Chromium persistant (connexions conservées)

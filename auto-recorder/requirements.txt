@@ -1,0 +1,2 @@
+obsws-python>=1.7
+playwright>=1.45   # facultatif : uniquement pour --join (rejoindre la réunion automatiquement)

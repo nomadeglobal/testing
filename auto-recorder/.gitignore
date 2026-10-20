@@ -1,0 +1,4 @@
+config.toml
+browser-profile/
+logs/
+__pycache__/
