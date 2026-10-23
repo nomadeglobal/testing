@@ -1,0 +1,205 @@
+{
+  "name": "Webinaire",
+  "current_scene": "Webinaire",
+  "current_program_scene": "Webinaire",
+  "scene_order": [
+    {
+      "name": "Webinaire"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Webinaire",
+      "id": "scene",
+      "versioned_id": "scene",
+      "settings": {
+        "id_counter": 3,
+        "items": [
+          {
+            "name": "Capture fenêtre navigateur",
+            "id": 1,
+            "visible": true,
+            "locked": false,
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "rot": 0.0,
+            "align": 5,
+            "bounds_type": 2,
+            "bounds_align": 0,
+            "bounds": {
+              "x": 1920.0,
+              "y": 1080.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal"
+          },
+          {
+            "name": "Capture écran (secours)",
+            "id": 2,
+            "visible": false,
+            "locked": false,
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "rot": 0.0,
+            "align": 5,
+            "bounds_type": 2,
+            "bounds_align": 0,
+            "bounds": {
+              "x": 1920.0,
+              "y": 1080.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal"
+          },
+          {
+            "name": "Audio navigateur",
+            "id": 3,
+            "visible": true,
+            "locked": false,
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "rot": 0.0,
+            "align": 5,
+            "bounds_type": 2,
+            "bounds_align": 0,
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "crop_left": 0,
+            "crop_top": 0,
+            "crop_right": 0,
+            "crop_bottom": 0,
+            "scale_filter": "disable",
+            "blend_method": "default",
+            "blend_type": "normal"
+          }
+        ]
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "muted": false,
+      "enabled": true,
+      "balance": 0.5,
+      "prev_ver": 0,
+      "push-to-mute": false,
+      "push-to-talk": false,
+      "hotkeys": {},
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0
+    },
+    {
+      "name": "Capture fenêtre navigateur",
+      "id": "window_capture",
+      "versioned_id": "window_capture",
+      "settings": {
+        "method": 2,
+        "priority": 2,
+        "window": "Meet:Chrome_WidgetWin_1:chrome.exe",
+        "cursor": false,
+        "client_area": true
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "muted": false,
+      "enabled": true,
+      "balance": 0.5,
+      "prev_ver": 0,
+      "push-to-mute": false,
+      "push-to-talk": false,
+      "hotkeys": {},
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0
+    },
+    {
+      "name": "Capture écran (secours)",
+      "id": "monitor_capture",
+      "versioned_id": "monitor_capture",
+      "settings": {
+        "monitor": 0,
+        "capture_cursor": false
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "muted": false,
+      "enabled": true,
+      "balance": 0.5,
+      "prev_ver": 0,
+      "push-to-mute": false,
+      "push-to-talk": false,
+      "hotkeys": {},
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0
+    },
+    {
+      "name": "Audio navigateur",
+      "id": "wasapi_process_output_capture",
+      "versioned_id": "wasapi_process_output_capture",
+      "settings": {
+        "window": "Meet:Chrome_WidgetWin_1:chrome.exe",
+        "priority": 2
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "muted": false,
+      "enabled": true,
+      "balance": 0.5,
+      "prev_ver": 0,
+      "push-to-mute": false,
+      "push-to-talk": false,
+      "hotkeys": {},
+      "deinterlace_mode": 0,
+      "deinterlace_field_order": 0,
+      "monitoring_type": 0
+    }
+  ],
+  "groups": [],
+  "transitions": [],
+  "transition_duration": 300,
+  "modules": {},
+  "quick_transitions": [],
+  "saving": false,
+  "resolution": {
+    "x": 1920,
+    "y": 1080
+  }
+}

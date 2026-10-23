@@ -13,10 +13,24 @@ Le script (1) contrôle que tout est prêt, (2) rejoint la réunion, (3) lance O
 
 1. Python 3.11+ ; `pip install -r requirements.txt` ; `playwright install chromium` (pour `--join`).
 2. OBS ≥ 28 : *Outils > Paramètres du serveur WebSocket* → activer, définir un mot de passe.
-3. Dans OBS, créer la scène (ex. « Webinaire ») avec :
-   - **Capture de fenêtre** (ou d'écran) ;
-   - **Capture audio d'application** ciblant Chromium/Chrome (plutôt que « Audio du bureau »,
-     qui enregistrerait aussi vos notifications Windows). Nommer la source (ex. « Audio navigateur »).
+3. **Importer la configuration OBS fournie** (dossier `obs-config/`) :
+   - *Collection de scènes > Importer* → `obs-config/Webinaire.scene-collection.json`, puis
+     *Collection de scènes > Webinaire*. Elle contient la scène « Webinaire » avec :
+     - « Capture fenêtre navigateur » : fenêtre `chrome.exe` (Windows Graphics Capture, sans curseur) ;
+     - « Capture écran (secours) » : masquée ; l'afficher (œil) si la capture de fenêtre reste noire ;
+     - « Audio navigateur » : *Capture audio d'application* sur `chrome.exe` (uniquement le son
+       du navigateur, pas vos notifications Windows). Aucun micro ni « Audio du bureau » n'est
+       ajouté : vous ne parlez pas, et rien d'autre ne doit fuiter dans l'enregistrement.
+   - *Profil > Importer* → dossier `obs-config/profile/Webinaire` (1080p, 25 i/s, x264,
+     qualité « Small », format MKV). Choisir ensuite le dossier d'enregistrement dans
+     *Paramètres > Sortie*.
+   - *Paramètres > Avancé > Remux automatique en mp4* : à cocher si vous voulez du mp4 (le MKV
+     reste intact en cas de plantage d'OBS ; le script annonce le chemin du fichier brut).
+   - **À vérifier une fois** : lancer une réunion de test avec `--join`, regarder si la source de
+     fenêtre affiche l'image et si le vumètre de « Audio navigateur » bouge. Si la fenêtre est
+     introuvable, double-cliquer la source et la re-sélectionner dans la liste. Si le navigateur
+     capturé n'est pas Chrome (Edge : `msedge.exe`), ajuster aussi l'audio.
+   - Prérequis : OBS ≥ 29 (la capture audio d'application est absente des versions plus anciennes).
 4. `copy config.example.toml config.toml` puis renseigner mot de passe, noms de scène/source,
    et éventuellement `ntfy_topic` pour les alertes sur téléphone (app ntfy).
 
